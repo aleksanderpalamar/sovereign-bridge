@@ -6,5 +6,31 @@
   "openclaw": {
     "emoji": "🌉",
     "type": "skill"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksanderpalamar/sovereign-bridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aleksanderpalamar/sovereign-bridge/issues"
+  },
+  "homepage": "https://github.com/aleksanderpalamar/sovereign-bridge#readme",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.0",
+    "axios": "^1.13.4",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
