@@ -1,0 +1,10 @@
+{
+  "name": "sovereign-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between agent digital economy and physical infra via PIX.",
+  "main": "index.js",
+  "openclaw": {
+    "emoji": "🌉",
+    "type": "skill"
+  }
+}
