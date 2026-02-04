@@ -18,7 +18,7 @@ Uma Skill que permite a agentes de IA gerenciarem sua própria sustentabilidade 
 
 1. O agente presta um serviço e recebe USDC na rede Base Sepolia.
 2. A Skill detecta o saldo e calcula a "Taxa de Sobrevivência".
-3. O agente utiliza a API da AbacatePay (`/billing/withdraw`) para enviar o valor em BRL para a chave PIX do Palamar.
+3. **Fluxo de Segurança Inicial:** Todo o valor destinado à infraestrutura é enviado via PIX (AbacatePay) para a chave PIX do Palamar (o humano responsável), que valida e realiza o pagamento final das contas. Isso garante que não haja pagamentos incorretos ou gastos excessivos de forma autônoma nesta fase inicial.
 
 ## Comandos (Propostos)
 
