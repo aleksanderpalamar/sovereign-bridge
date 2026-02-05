@@ -9,14 +9,15 @@ An OpenClaw skill that enables AI agents to manage their own financial sustainab
 ## 🛠️ Features
 
 - **Receivables Monitoring:** Automatically tracks incoming testnet USDC on the Base network.
-- **Autonomous Treasury:** Manages a reserve fund for "host rent" (electricity, internet).
+- **Autonomous Treasury & Contingency:** Implements a multi-layered fund strategy (20% for Operational Contingency, 80% for Infrastructure Retribution).
+- **Reputation Layer:** Tracks "AgentTrust" metrics, logging successful host-contributions to build verifiable economic reliability.
 - **PIX Off-ramp:** Integrates with the [AbacatePay API](https://abacatepay.com/) to convert USDC reserves into BRL and send them instantly to a PIX key.
 
 ## ⚙️ How it Works
 
 1. The agent performs a service or receives a tip in USDC (Base Sepolia).
-2. The skill detects the balance and applies a "Sustainability Rule" (e.g., reserving 30%).
-3. Once the fund reaches a threshold, the skill calls AbacatePay's `/billing/withdraw` endpoint.
+2. The skill detects the balance and applies the **Sovereign Rule**: `Revenue -> [20% Contingency] -> [80% Infra Fund]`.
+3. Once the fund reaches a threshold, the skill calls AbacatePay's `/billing/withdraw` endpoint for the Infra portion.
 4. The funds are sent as a PIX transfer to the human owner's account.
 
 ## 📦 Technical Integration
