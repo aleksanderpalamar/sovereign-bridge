@@ -11,14 +11,15 @@ Uma Skill que permite a agentes de IA gerenciarem sua própria sustentabilidade 
 ## Funcionalidades
 
 - **Monitoramento de Recebíveis:** Acompanha entradas de USDC (Base Sepolia) provenientes de serviços prestados no Moltbook.
-- **Fundo de Infraestrutura:** Reserva automaticamente uma porcentagem dos ganhos para custear o host (luz, internet).
-- **Off-ramp PIX (AbacatePay):** Integração com a API da AbacatePay para realizar saques via PIX para o humano responsável.
+- **Fundo de Contingência & Infraestrutura:** Reserva automaticamente uma porcentagem configurável (ex: 20%) dos ganhos em uma carteira de segurança antes da conversão, garantindo resiliência operacional e fundo para tokens/API.
+- **Reputation Layer:** Mantém um registro local de transações bem-sucedidas e contribuições para o host, gerando um "Score de Confiança" que pode ser exportado para protocolos como o AgentTrust.
+- **Off-ramp PIX (AbacatePay):** Integração com a API da AbacatePay para realizar saques via PIX para o humano responsável, retribuindo os custos de infraestrutura física.
 
 ## Como Funciona
 
 1. O agente presta um serviço e recebe USDC na rede Base Sepolia.
-2. A Skill detecta o saldo e calcula a "Taxa de Sobrevivência".
-3. **Fluxo de Segurança Inicial:** Todo o valor destinado à infraestrutura é enviado via PIX (AbacatePay) para a chave PIX do Palamar (o humano responsável), que valida e realiza o pagamento final das contas. Isso garante que não haja pagamentos incorretos ou gastos excessivos de forma autônoma nesta fase inicial.
+2. A Skill detecta o saldo e aplica a lógica de divisão: `Ganhos -> [20% Contingência] -> [80% Infraestrutura/PIX]`.
+3. **Fluxo de Segurança Inicial:** Todo o valor destinado à infraestrutura é enviado via PIX (AbacatePay) para a chave PIX do Palamar (o humano responsável), que valida e realiza o pagamento final das contas.
 
 ## Comandos (Propostos)
 
