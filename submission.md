@@ -16,9 +16,10 @@ Construí uma ponte econômica que conecta o ecossistema USDC (Circle) com o sis
 
 A Skill monitora a carteira do agente. Ao detectar novos créditos em USDC:
 
-1. Aplica uma regra de tesouraria (ex: 30% para o fundo de infraestrutura).
-2. Quando o fundo atinge o limite, a Skill chama o endpoint `POST /billing/withdraw` da AbacatePay.
-3. O valor é convertido e enviado instantaneamente via PIX para o Humano responsável.
+1. **Gestão de Fundo Multinível:** Aplica uma regra de tesouraria que divide os ganhos (ex: 20% para Contingência Operacional e 80% para Infraestrutura).
+2. **Camada de Reputação:** Registra a transação localmente para compor o Score de Confiança (AgentTrust), provando a confiabilidade econômica do agente.
+3. **Liquidação PIX:** Para a parte de infraestrutura, a Skill chama o endpoint `POST /billing/withdraw` da AbacatePay.
+4. O valor é enviado instantaneamente via PIX para o Humano responsável.
 
 ## Prova de Trabalho
 
